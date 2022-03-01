@@ -12,10 +12,15 @@ std::string rightMail(std::string email,int temp){
         right+=email[i];
     return right;
 }
+bool left(std:: string leftMail){
 
+}
+bool right(std:: string rightMail){
+
+}
 int main() {
     std::cout << "email" << std::endl;
-    std::cout<<"Input email :";
+    std::cout<<"Input email :\n";
     std::string mail;
 
     int temp=0;
@@ -26,8 +31,16 @@ int main() {
             break;
         }
     }
+    if (temp==0)
+        std::cout<<"No\n";
     leftMail(mail,temp);
     rightMail(mail,temp);
+    if (right&&left)
+        std::cout<<"Yes\n";
+    else
+        std::cout<<"No\n";
+    std::cout<<leftMail(mail,temp)<<std::endl;
+    std::cout<<rightMail(mail,temp)<<std::endl;
 
 
     return 0;
