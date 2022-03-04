@@ -1,0 +1,3 @@
+C:/Users/filch/CLionProjects/email/cmake-build-debug/CMakeFiles/email.dir
+C:/Users/filch/CLionProjects/email/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/filch/CLionProjects/email/cmake-build-debug/CMakeFiles/rebuild_cache.dir

@@ -14,7 +14,7 @@ std::string rightMail(std::string email, int temp) {
 }
 bool left(std::string left) {
     bool num = true;
-    std::string sim="(),:;< >@[\]";
+    std::string sim="(),:;< >@[\\]";
     if(left.length()<1 || left.length()>64)
     return false;
     else {
@@ -41,7 +41,7 @@ bool left(std::string left) {
     }
 }
 bool right(std::string right) {
-    std::string sim = "/:;<=>?@[\]^_`";
+    std::string sim = "/:;<=>?@[\\]^_`";
     bool num = true;
     if (right.length() < 1 || right.length() > 63)
         return false;
