@@ -18,7 +18,7 @@ bool left(std::string left) {
     if(left.length()<1 || left.length()>64 )
     return false;
     else {
-        if (left[0] != '.' || left[left.length() - 1] != '.')
+        if (left[0] != '.' && left[left.length() - 1] != '.')
         {
             for (int i = 0; i < left.length() && num; i++) {
                 for (int j = 0; j < sim.length(); j++) {
