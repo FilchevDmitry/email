@@ -15,20 +15,20 @@ std::string rightMail(std::string email, int temp) {
 bool left(std::string left) {
     bool num = true;
     std::string sim="(),:;< >@[\\]";
-    if(left.length()<1 || left.length()>64)
+    if(left.length()<1 || left.length()>64 )
     return false;
     else {
         if (left[0] != '.' || left[left.length() - 1] != '.')
         {
             for (int i = 0; i < left.length() && num; i++) {
                 for (int j = 0; j < sim.length(); j++) {
-                    if (left[i] == sim[j] || left[i] == '"' || left[i] == 127) {
+                    if (left[i] == sim[j] || left[i] == '"' || left[i]<33|| left[i]>126) {
                         return false;
                         num = false;
                         break;
                     }
                 }
-                if (left[i] == '.' && left[i + 1] == '.')
+                if (left[i] == '.' && left[i + 1] == '.' || left[0]=='.')
                 {
                     return false;
                     num = false;
@@ -46,11 +46,11 @@ bool right(std::string right) {
     if (right.length() < 1 || right.length() > 63)
         return false;
     else {
-        if (right[0] != '.' || right[right.length() - 1] != '.')
+        if (right[0] != '.' && right[right.length() - 1] != '.')
         {
             for (int i = 0; i < right.length() && num; i++) {
                 for (int j = 0; j < sim.length(); j++) {
-                    if (right[i] == sim[j]) {
+                    if (right[i] == sim[j] || right[i]<33|| right[i]>126) {
                         return false;
                         num = false;
                         break;
